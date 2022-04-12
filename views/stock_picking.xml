@@ -2,7 +2,7 @@
 <odoo>
 
     <data>
-        <record id="barcode_lot_stock_view_picking_form" model="ir.ui.view">
+        <!-- <record id="barcode_lot_stock_view_picking_form" model="ir.ui.view">
             <field name="name">barcode_lot.stock.view.picking.form</field>
             <field name="model">stock.picking</field>
             <field name="inherit_id" ref="stock.view_picking_form"/>
@@ -10,11 +10,8 @@
                 <xpath expr="//field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="before">
                     <field name="barcode"/>
                 </xpath>
-                <!-- <xpath expr="//field[@name='move_line_ids_without_package']/tree/field[@name='product_id']" position="before">
-                    <field name="barcode"/>
-                </xpath> -->
             </field>
-        </record>
+        </record> -->
 
         <record id="barcode_view_stock_move_line_detailed_operation_tree" model="ir.ui.view">
             <field name="name">barcode.stock.move.line.operations.inherit.tree</field>
@@ -26,60 +23,6 @@
                 </xpath>
             </field>
         </record>
-
-        <!-- <record id="barcode_lot_view_move_line_tree_detailed" model="ir.ui.view">
-            <field name="name">barcode_lot.stock.move.line.tree.detailed</field>
-            <field name="model">stock.move.line</field>
-            <field name="inherit_id" ref="stock.view_move_line_tree_detailed"/>
-            <field name="arch" type="xml">
-                <field name="product_id" position="before">
-                    <field name="barcode"/>
-                </field>
-            </field>
-        </record> -->
-
-
-        <!-- <record id="barcode_lot_view_move_line_tree" model="ir.ui.view">
-            <field name="name">"barcode_lot.stock.move.line.tree</field>
-            <field name="model">stock.move.line</field>
-            <field name="inherit_id" ref="stock.view_move_line_tree"/>
-            <field name="arch" type="xml">
-                <field name="product_id" position="before">
-                    <field name="barcode"/>
-                </field>
-            </field>
-        </record> -->
-
-        <!-- <record id="stockbarcode_view_stock_move_line_operation_tree" model="ir.ui.view">
-            <field name="name">stockbarcode.stock.move.line.operations.tree</field>
-            <field name="model">stock.move.line</field>
-            <field name="inherit_id" ref="stock.view_stock_move_line_operation_tree"/>
-            <field name="arch" type="xml">
-              <field name="product_id" position="before">
-                  <field name="barcode"/>
-              </field>
-            </field>
-
-
-        </record> -->
-
-        <!-- <record id="action_get_picking_type_operations" model="ir.actions.act_window">
-            <field name="name">Operations</field>
-            <field name="res_model">stock.move.line</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="context">{
-                'search_default_todo': '1',
-            }</field>
-            <field name="search_view_id" ref="stock_move_line_view_search"/>
-            <field name="help" type="html">
-                <p class="o_view_nocontent_smiling_face">
-                    No operations found. Let's create a tranfer !
-                </p>
-                <p>
-                    Transfers allow you to move products from one location to another.
-                </p>
-            </field>
-        </record> -->
 
     </data>
 
