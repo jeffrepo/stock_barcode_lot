@@ -50,7 +50,7 @@ class StockMoveLine(models.Model):
             logging.warning(self.barcode[0:11])
             if product_id:
                 logging.warning(self.barcode[12:17])
-                lot_id = self.env['stock.production.lot'].search([('name','=', self.barcode[11:17]),('product_id','=',product_id.id)])
+                lot_id = self.env['stock.production.lot'].search([('name','=', self.barcode[11:18]),('product_id','=',product_id.id)])
                 logging.warning(lot_id)
                 self.product_id = product_id.id
                 if lot_id:
